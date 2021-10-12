@@ -78,7 +78,8 @@ gulp.task('css', done => {
                 "ie >= 8"
             ]
         }))
-        .pipe(postcss(processors))//px转rem tips: 如果某个px不转换，可使用大写代替，类似1PX
+        // mobile 手机版px2rem
+        // .pipe(postcss(processors))//px转rem tips: 如果某个px不转换，可使用大写代替，类似1PX
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/css'))
         .pipe(connect.reload())
